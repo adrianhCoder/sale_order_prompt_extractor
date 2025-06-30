@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_extract_sale_order_data" model="ir.actions.server">
+            <field name="name">Extraer Datos para Prompt</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">list,form</field>
+            <field name="state">code</field>
+            <field name="code">
+records.action_extract_prompt_data()
+            </field>
+        </record>
+    </data>
+</odoo> 
