@@ -10,8 +10,9 @@
     'website': "https://www.github.com/Adrianovaldes",
     'category': 'Sales',
     'version': '17.0.1.0.0',
-    'depends': ['sale_management'],
+    'depends': ['sale_management', 'base_setup'],
     'data': [
+        'views/res_config_settings_views.xml',
         'views/sale_order_view.xml',
     ],
     'installable': True,
