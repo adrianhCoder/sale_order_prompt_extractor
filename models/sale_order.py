@@ -145,8 +145,10 @@ class SaleOrder(models.Model):
 
             # Recorrer líneas no display_type
             for line in order.order_line.filtered(lambda l: not l.display_type):
-                # Use only the product's name as concepto
-                concepto = line.product_id.name or ''
+                full = line.product_id.display_name or ''
+                concepto = re.sub(r'^\[.*?\]\s*', '', full)
+
+                
                 _logger.info("Using product name for concepto: %s", concepto)
                 categoria = 'FABRICACION' if any(t in concepto.lower() for t in ['tabla', 'cono', 'módulo']) else 'COMERCIAL'
                 familia = (line.product_id.categ_id.name or '').upper()
