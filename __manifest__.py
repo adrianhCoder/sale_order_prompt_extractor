@@ -14,6 +14,7 @@
     'data': [
         'views/res_config_settings_views.xml',
         'views/sale_order_view.xml',
+        'views/account_move_actions.xml',
     ],
     'installable': True,
     'application': False,
