@@ -8,8 +8,8 @@
             <field name="binding_view_types">list,form</field>
             <field name="state">code</field>
             <field name="code">
-records.action_extract_prompt_data()
+                records.action_extract_prompt_data()
             </field>
-        </record>
+        </record>        
     </data>
 </odoo> 

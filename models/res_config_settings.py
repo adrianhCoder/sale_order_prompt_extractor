@@ -13,7 +13,15 @@ class ResConfigSettings(models.TransientModel):
         config_parameter='sale_order_prompt_extractor.google_sheet_worksheet_name',
         default='PED G'
     )
+
+    google_sheet_invoice_worksheet_name = fields.Char(
+        string="Worksheet Name (Invoices)",
+        default="FACT G",
+    )
+    
     google_service_account_key = fields.Char(
         string='Google Service Account JSON Key',
         config_parameter='sale_order_prompt_extractor.google_service_account_key'
     ) 
+
+    
